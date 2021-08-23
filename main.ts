@@ -8,17 +8,7 @@
 
 //% block="Soroban" color="#8B4513" weight=100 icon="\uf2a1"
 namespace soroban {
-    /**
-     * Show digit.
-     * @param n the number, eg: 1
-     * @param col the column, eg: 1
-     */
-    //% blockId=soroban_show_digit
-    //% block="show digit $n in column $col"
-    //% n.min=0 n.max=9 n.defl=0
-    //% col.min=1 col.max=5 col.defl=1
-    //% weight=99
-    export function showDigit(n: number, col: number) {
+    function showDigit(n: number, col: number) {
         if (n == 0) {
             for (let i = 0; i <= 4; i++) {
                 led.unplot(col, i)
