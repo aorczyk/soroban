@@ -27,12 +27,11 @@ namespace soroban {
 
     /**
      * Show number. When column is not given clears the screen and displays number part which fit the screen.
-     * @param n the number, eg: 3.14
+     * @param n the number, eg: 0
      * @param col the starting column, eg: 0
      */
     //% blockId=soroban_show_number
     //% block="show number $n || column $col"
-    //% col.min=0 col.max=4
     //% weight=99
     export function showNumber(n: number, col: number = null) {
         let nStr = n.toString();

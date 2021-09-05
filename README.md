@@ -1,31 +1,32 @@
+# LEGO Power Functions Controller
 
-> Otwórz tę stronę na [https://aorczyk.github.io/micro-bit-show-soroban-number/](https://aorczyk.github.io/micro-bit-show-soroban-number/)
+Control your LEGO Power Functions devices simultaneously with Micro:bit and an 940 nm emitting diode. 
+For sending IR signals to LEGO receiver I use extension: [Power Functions IR Sender](https://github.com/philipphenkel/pxt-powerfunctions).
 
-## Użyj jako rozszerzenia
+# Documentation
 
-To repozytorium można dodać jako **rozszerzenie** w MakeCode.
+## soroban.showNumber
 
-* otwórz [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* kliknij na **Nowy Projekt**
-* kliknij **Rozszerzenia** w menu oznaczonym kołem zębatym
-* szukaj **https://github.com/aorczyk/micro-bit-show-soroban-number** i importuj
+Show number. When column is not given clears the screen and displays number part which fit the screen and align right.
 
-## Edytuj ten projekt ![Status kompilacji](https://github.com/aorczyk/micro-bit-show-soroban-number/workflows/MakeCode/badge.svg)
+```sig
+soroban.showNumber(1, 0)
+```
 
-Aby edytować to repozytorium w MakeCode.
+### Parameters
+     * @param n the number, eg: 3.14
+     * @param col the starting column, eg: 0
+- `number` - the number
+- `column` - the starting column (not required). 
 
-* otwórz [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* kliknij **Importuj**, a następnie **Importuj URL**
-* wklej **https://github.com/aorczyk/micro-bit-show-soroban-number** i kliknij importuj
+## MakeCode Example
 
-## Podgląd bloków
+```blocks
+soroban.showNumber(12345)
+```
 
-Ten obraz przedstawia kod bloków z ostatniego zatwierdzenia we wzorcu.
-Ten obraz może odświeżać się kilka minut.
+## License
 
-![Renderowany widok bloków](https://github.com/aorczyk/micro-bit-show-soroban-number/raw/master/.github/makecode/blocks.png)
+Copyright (C) 2021 Adam Orczyk
 
-#### Metadane (używane do wyszukiwania, renderowania)
-
-* for PXT/microbit
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+Licensed under the MIT License (MIT). See LICENSE file for more details.
