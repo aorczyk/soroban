@@ -6,8 +6,19 @@
  * (c) 2021, Adam Orczyk
  */
 
+const enum Column {
+    Auto = -1,
+    C1 = 0,
+    C2 = 1,
+    C3 = 2,
+    C4 = 3,
+    C5 = 4,
+}
+
 //% block="Soroban" color="#8B4513" weight=100 icon="\uf2a1"
 namespace soroban {
+    let currentNumber: number = null;
+
     function showDigit(n: number, col: number) {
         if (n == 0) {
             for (let i = 0; i <= 4; i++) {
@@ -27,40 +38,44 @@ namespace soroban {
 
     /**
      * Show number. When column is not given clears the screen and displays number part which fit the screen.
-     * @param n the number, eg: 0
-     * @param col the starting column, eg: 0
+     * @param n the number
+     * @param col the starting column
      */
     //% blockId=soroban_show_number
     //% block="show number $n || column $col"
     //% weight=99
-    export function showNumber(n: number, col: number = null) {
-        let nStr = n.toString();
+    export function showNumber(n: number, col: Column = Column.Auto) {
+        if (currentNumber != n || col != Column.Auto){
+            currentNumber = n
 
-        if (nStr.length > 5){
-            nStr = nStr.substr(0,5)
-        }
+            let nStr = n.toString();
 
-        let chars = nStr.split('')
-
-        let c = 5 - chars.length
-        if (col !== null) {
-            c = col
-        } else {
-            basic.clearScreen()
-        }
-
-        while (c < 5) {
-            let p = chars.shift()
-
-            if (p == '.') {
-                led.plot(c, 4)
-            } else if (p == '-') {
-                led.plot(c, 2)
-            } else {
-                showDigit(parseInt(p), c)
+            if (nStr.length > 5){
+                nStr = nStr.substr(0,5)
             }
 
-            c += 1
+            let chars = nStr.split('')
+
+            let c = 5 - chars.length
+            if (col != Column.Auto) {
+                c = col as number
+            } else {
+                basic.clearScreen()
+            }
+
+            while (c < 5) {
+                let p = chars.shift()
+
+                if (p == '.') {
+                    led.plot(c, 4)
+                } else if (p == '-') {
+                    led.plot(c, 2)
+                } else {
+                    showDigit(parseInt(p), c)
+                }
+
+                c += 1
+            }
         }
     }
 }
