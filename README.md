@@ -3,6 +3,13 @@
 Control your LEGO Power Functions devices simultaneously with Micro:bit and an 940 nm emitting diode. 
 For sending IR signals to LEGO receiver I use extension: [Power Functions IR Sender](https://github.com/philipphenkel/pxt-powerfunctions).
 
+## Use as Extension
+This repository can be added as an **extension** in MakeCode.
+* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
+* click on **New Project**
+* click on **Extensions** under the gearwheel menu
+* search for **https://github.com/aorczyk/pf-recorder** and import
+
 # Documentation
 
 ## soroban.showNumber
