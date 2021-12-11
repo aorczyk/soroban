@@ -41,13 +41,13 @@ namespace soroban {
      * Show number. When column is not given clears the screen and displays number part which fit the screen.
      * @param n the number
      * @param col the starting column
-     * @param clear clear the screen before showing a number
+     * @param refresh refresh the screen
      */
     //% blockId=soroban_show_number
     //% block="show number $n || column $col"
     //% weight=99
-    export function showNumber(n: number, col: Align = Align.Left, clear: boolean = true) {
-        if (currentNumber != n || !clear){
+    export function showNumber(n: number, col: Align = Align.Left, refresh: boolean = true) {
+        if (currentNumber != n || !refresh){
             currentNumber = n
 
             let nStr = n.toString();
@@ -63,7 +63,7 @@ namespace soroban {
                 c = col as number
             }
             
-            if (clear) {
+            if (refresh) {
                 basic.clearScreen()
             }
 
