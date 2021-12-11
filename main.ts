@@ -40,14 +40,14 @@ namespace soroban {
     /**
      * Show number. When column is not given clears the screen and displays number part which fit the screen.
      * @param n the number
-     * @param refresh refresh the screen
      * @param col the starting column
+     * @param refresh refresh the screen
      */
     //% blockId=soroban_show_number
-    //% block="show number $n || refresh $refresh column $col"
+    //% block="show number $n || column $col refresh $refresh"
     //% weight=99
-    export function showNumber(n: number, refresh: boolean = true, col: Align = Align.Left) {
-        if (currentNumber != n || !refresh){
+    export function showNumber(n: number, col: Align = Align.Left, refresh: boolean = true) {
+        if (currentNumber != n || refresh){
             currentNumber = n
 
             let nStr = n.toString();
