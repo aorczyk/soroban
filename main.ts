@@ -6,8 +6,9 @@
  * (c) 2021, Adam Orczyk
  */
 
-const enum Column {
-    Auto = -1,
+const enum Align {
+    Right = -1,
+    Left = 0,
     C1 = 0,
     C2 = 1,
     C3 = 2,
@@ -45,8 +46,8 @@ namespace soroban {
     //% blockId=soroban_show_number
     //% block="show number $n || column $col"
     //% weight=99
-    export function showNumber(n: number, col: Column = Column.C1, clear: boolean = true) {
-        if (currentNumber != n || col != Column.Auto){
+    export function showNumber(n: number, col: Align = Align.Left, clear: boolean = true) {
+        if (currentNumber != n || col != Align.Right){
             currentNumber = n
 
             let nStr = n.toString();
@@ -58,10 +59,12 @@ namespace soroban {
             let chars = nStr.split('')
 
             let c = 5 - chars.length
+            if (col != Align.Right) {
+                c = col as number
+            }
+            
             if (clear) {
                 basic.clearScreen()
-            } else {
-                c = col as number
             }
 
             while (c < 5) {
