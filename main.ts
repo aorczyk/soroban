@@ -47,7 +47,7 @@ namespace soroban {
     //% block="show number $n || column $col"
     //% weight=99
     export function showNumber(n: number, col: Align = Align.Left, clear: boolean = true) {
-        if (currentNumber != n || col != Align.Right){
+        if (currentNumber != n || !clear){
             currentNumber = n
 
             let nStr = n.toString();
