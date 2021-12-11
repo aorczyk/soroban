@@ -1,5 +1,5 @@
 // soroban.showNumber(123456789)
-soroban.showNumber(21)
+// soroban.showNumber(21)
 // soroban.showNumber(3.14, 0, false)
 // soroban.showNumber(3.15, Align.Right)
 // soroban.showNumber(-10)
