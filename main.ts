@@ -40,11 +40,12 @@ namespace soroban {
      * Show number. When column is not given clears the screen and displays number part which fit the screen.
      * @param n the number
      * @param col the starting column
+     * @param clear clear the screen before showing a number
      */
     //% blockId=soroban_show_number
     //% block="show number $n || column $col"
     //% weight=99
-    export function showNumber(n: number, col: Column = Column.Auto) {
+    export function showNumber(n: number, col: Column = Column.C1, clear: boolean = true) {
         if (currentNumber != n || col != Column.Auto){
             currentNumber = n
 
@@ -57,10 +58,10 @@ namespace soroban {
             let chars = nStr.split('')
 
             let c = 5 - chars.length
-            if (col != Column.Auto) {
-                c = col as number
-            } else {
+            if (clear) {
                 basic.clearScreen()
+            } else {
+                c = col as number
             }
 
             while (c < 5) {
