@@ -1,30 +1,22 @@
-# LEGO Power Functions Controller
+# Soroban number
 
-Control your LEGO Power Functions devices simultaneously with Micro:bit and an 940 nm emitting diode. 
-For sending IR signals to LEGO receiver I use extension: [Power Functions IR Sender](https://github.com/philipphenkel/pxt-powerfunctions).
-
-## Use as Extension
-This repository can be added as an **extension** in MakeCode.
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **New Project**
-* click on **Extensions** under the gearwheel menu
-* search for **https://github.com/aorczyk/pf-recorder** and import
+Displaying number on the micro:bit screen using Soroban abacus notation. This allows to display 5 digit number on the screen.
 
 # Documentation
 
 ## soroban.showNumber
 
-Show number. When column is not given clears the screen and displays number part which fit the screen and align right.
+Show number usign Soroban abacus notation.
 
 ```sig
-soroban.showNumber(1, 0)
+soroban.showNumber(1)
 ```
 
 ### Parameters
-     * @param n the number, eg: 3.14
-     * @param col the starting column, eg: 0
 - `number` - the number
-- `column` - the starting column (not required). 
+- `column` - col align to the given column
+- `refresh` - specify whether the screen should be cleared before displaying number
+
 
 ## MakeCode Example
 

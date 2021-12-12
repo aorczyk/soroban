@@ -38,15 +38,15 @@ namespace soroban {
     }
 
     /**
-     * Show number. When column is not given clears the screen and displays number part which fit the screen.
-     * @param n the number
-     * @param col the starting column
+     * Show number usign Soroban abacus notation.
+     * @param n the number, eg: 0
+     * @param col align to the given column
      * @param refresh refresh the screen
      */
     //% blockId=soroban_show_number
-    //% block="show number $n || column $col refresh $refresh"
+    //% block="show number $n || align $col refresh $refresh"
     //% weight=99
-    export function showNumber(n: number, col: Align = Align.Left, refresh: boolean = true) {
+    export function showNumber(n: number, col: Align = Align.Right, refresh: boolean = true) {
         if (currentNumber != n || refresh){
             currentNumber = n
 
