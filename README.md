@@ -2,6 +2,8 @@
 
 Displaying number on the micro:bit screen using Soroban abacus notation. This allows to display 5 digit number on the screen.
 
+Soroban: https://en.wikipedia.org/wiki/Soroban
+
 # Documentation
 
 ## soroban.showNumber

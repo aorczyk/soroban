@@ -40,8 +40,8 @@ namespace soroban {
     /**
      * Show number usign Soroban abacus notation.
      * @param n the number, eg: 0
-     * @param col align to the given column
-     * @param refresh refresh the screen
+     * @param col align to the given column, eg: Align.Right
+     * @param refresh refresh the screen, eg: true
      */
     //% blockId=soroban_show_number
     //% block="show number $n || align $col refresh $refresh"
