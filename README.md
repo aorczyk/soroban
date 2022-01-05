@@ -2,7 +2,16 @@
 
 Displaying number on the micro:bit screen using Soroban abacus notation. This allows to display 5 digit number on the screen.
 
-Soroban: https://en.wikipedia.org/wiki/Soroban
+Soroban: https://en.wikipedia.org/wiki/Soroban  
+
+### Representation of digits 0 - 9, minus and decimal separator on the micro:bit screen (- led is off, + led is on):
+
+``- - - - - + + + + + - -``  
+``- + + + + - + + + + - -``  
+``- - + + + - - + + + + -``  
+``- - - + + - - - + + - -``  
+``- - - - + - - - - + - +``  
+``0 1 2 3 4 5 6 7 8 9 - .``  
 
 # Documentation
 
@@ -16,8 +25,8 @@ soroban.showNumber(1)
 
 ### Parameters
 - `number` - the number
-- `column` - col align to the given column
-- `refresh` - specify whether the screen should be cleared before displaying number
+- `column` - align to the given column, by default align right
+- `refresh` - specify whether the screen should be cleared before displaying number, by default true
 
 
 ## MakeCode Example
