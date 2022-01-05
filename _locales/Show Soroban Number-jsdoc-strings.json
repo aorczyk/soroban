@@ -1,0 +1,7 @@
+{
+  "Align": "Show Soroban Number\r\nDisplaying numbers as on Soroban abacus.\r\nSoroban: https://en.wikipedia.org/wiki/Soroban\r\n* (c) 2021, Adam Orczyk",
+  "soroban.showNumber": "Show number usign Soroban abacus notation.",
+  "soroban.showNumber|param|col": "align to the given column, eg: Align.Right",
+  "soroban.showNumber|param|n": "the number, eg: 0",
+  "soroban.showNumber|param|refresh": "refresh the screen, eg: true"
+}
