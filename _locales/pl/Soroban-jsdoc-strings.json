@@ -1,0 +1,7 @@
+{
+  "Align": "Soroban\r\nWyświetlanie liczby jak na liczydle soroban.\r\nSoroban: https://en.wikipedia.org/wiki/Soroban\r\n* (c) 2021, Adam Orczyk",
+  "soroban.showNumber": "Wyświetlanie liczby jak na liczydle soroban.",
+  "soroban.showNumber|param|alignment": "wyrównanie do danej kolumny",
+  "soroban.showNumber|param|number": "liczba",
+  "soroban.showNumber|param|refresh": "odśwież ekran"
+}

@@ -1,0 +1,5 @@
+{
+  "soroban.showNumber|block": "show number $n || align $alignment refresh $refresh",
+  "soroban|block": "Soroban",
+  "{id:category}Soroban": "Soroban"
+}

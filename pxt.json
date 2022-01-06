@@ -10,8 +10,8 @@
     "files": [
         "main.ts",
         "README.md",
-        "_locales/pl/Show Soroban Number-jsdoc-strings.json",
-        "_locales/pl/Show Soroban Number-strings.json"
+        "_locales/pl/Soroban-jsdoc-strings.json",
+        "_locales/pl/Soroban-strings.json"
     ],
     "testFiles": [
         "test.ts"
