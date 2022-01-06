@@ -1,4 +1,11 @@
 {
+  "Align.C1|block": "Column 1",
+  "Align.C2|block": "Column 2",
+  "Align.C3|block": "Column 3",
+  "Align.C4|block": "Column 4",
+  "Align.C5|block": "Column 5",
+  "Align.Left|block": "Left",
+  "Align.Right|block": "Right",
   "soroban.showNumber|block": "show number $n || align $alignment refresh $refresh",
   "soroban|block": "Soroban",
   "{id:category}Soroban": "Soroban"
