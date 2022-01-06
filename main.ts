@@ -1,6 +1,6 @@
 /**
- * Show Soroban Number
- * Displaying numbers as on Soroban abacus.
+ * Soroban
+ * Displaying numbers as on the soroban abacus.
  * Soroban: https://en.wikipedia.org/wiki/Soroban
  * 
  * (c) 2021, Adam Orczyk
@@ -38,19 +38,19 @@ namespace soroban {
     }
 
     /**
-     * Show number usign Soroban abacus notation.
-     * @param n the number, eg: 0
-     * @param col align to the given column, eg: Align.Right
+     * Displaying numbers as on the soroban abacus.
+     * @param number the number, eg: 0
+     * @param alignment align to the given column, eg: Align.Right
      * @param refresh refresh the screen, eg: true
      */
     //% blockId=soroban_show_number
-    //% block="show number $n || align $col refresh $refresh"
+    //% block="show number $n || align $alignment refresh $refresh"
     //% weight=99
-    export function showNumber(n: number, col: Align = Align.Right, refresh: boolean = true) {
-        if (currentNumber != n || refresh){
-            currentNumber = n
+    export function showNumber(number: number, alignment: Align = Align.Right, refresh: boolean = true) {
+        if (currentNumber != number || refresh){
+            currentNumber = number
 
-            let nStr = n.toString();
+            let nStr = number.toString();
 
             if (nStr.length > 5){
                 nStr = nStr.substr(0,5)
@@ -59,8 +59,8 @@ namespace soroban {
             let chars = nStr.split('')
 
             let c = 5 - chars.length
-            if (col != Align.Right) {
-                c = col as number
+            if (alignment != Align.Right) {
+                c = alignment as number
             }
             
             if (refresh) {

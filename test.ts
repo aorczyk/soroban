@@ -1,5 +1,5 @@
 /**
- * PF Transmitter tests
+ * Soroban - tests
  */
 
 // Visual test
