@@ -39,18 +39,18 @@ namespace soroban {
 
     /**
      * Displays number as on the soroban abacus.
-     * @param number the number, eg: 0
+     * @param n the number, eg: 0
      * @param alignment align to the given column, eg: Align.Right
      * @param refresh refresh the screen, eg: true
      */
     //% blockId=soroban_show_number
-    //% block="show number $number || align $alignment refresh $refresh"
+    //% block="show number $n || align $alignment refresh $refresh"
     //% weight=99
-    export function showNumber(number: number, alignment: Align = Align.Right, refresh: boolean = true) {
-        if (currentNumber != number || refresh){
-            currentNumber = number
+    export function showNumber(n: number, alignment: Align = Align.Right, refresh: boolean = true) {
+        if (currentNumber != n || refresh){
+            currentNumber = n
 
-            let nStr = number.toString();
+            let nStr = n.toString();
 
             if (nStr.length > 5){
                 nStr = nStr.substr(0,5)
