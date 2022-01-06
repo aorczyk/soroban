@@ -1,5 +1,5 @@
 {
-  "soroban.showNumber|block": "pokaż liczbę $n || wyrównanie $alignment odśwież $refresh",
+  "soroban.showNumber|block": "pokaż liczbę $number || wyrównanie $alignment odśwież $refresh",
   "soroban|block": "Soroban",
   "{id:category}Soroban": "Soroban"
 }
