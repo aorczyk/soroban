@@ -1,6 +1,6 @@
 /**
  * Soroban
- * Displaying numbers as on the soroban abacus.
+ * Displaying number on the micro:bit screen as on the soroban abacus.
  * Soroban: https://en.wikipedia.org/wiki/Soroban
  * 
  * (c) 2021, Adam Orczyk
