@@ -44,7 +44,7 @@ namespace soroban {
      * @param refresh refresh the screen, eg: true
      */
     //% blockId=soroban_show_number
-    //% block="show number $n || align $alignment refresh $refresh"
+    //% block="show number $number || align $alignment refresh $refresh"
     //% weight=99
     export function showNumber(number: number, alignment: Align = Align.Right, refresh: boolean = true) {
         if (currentNumber != number || refresh){
