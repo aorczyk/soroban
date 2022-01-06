@@ -7,12 +7,19 @@
  */
 
 const enum Align {
+    //% block="Right"
     Right = -1,
+    //% block="Left"
     Left = 0,
+    //% block="Column 1"
     C1 = 0,
+    //% block="Column 2"
     C2 = 1,
+    //% block="Column 3"
     C3 = 2,
+    //% block="Column 4"
     C4 = 3,
+    //% block="Column 5"
     C5 = 4,
 }
 
