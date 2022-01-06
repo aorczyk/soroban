@@ -5,7 +5,7 @@
 // Visual test
 for (let n = 1; n <= 10; n++){
     soroban.showNumber(n)
-    basic.pause(1000)
+    basic.pause(500)
 }
 
 function checkScreen(screen: string){
@@ -112,3 +112,5 @@ control.assert(
     checkScreen('-+---,-++--,-----,-+---,+----,'),
     "Failed: 12:15"
 );
+
+soroban.showNumber(12345);
