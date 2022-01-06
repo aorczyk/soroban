@@ -38,7 +38,7 @@ namespace soroban {
     }
 
     /**
-     * Displaying numbers as on the soroban abacus.
+     * Displays number as on the soroban abacus.
      * @param number the number, eg: 0
      * @param alignment align to the given column, eg: Align.Right
      * @param refresh refresh the screen, eg: true

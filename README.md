@@ -18,7 +18,7 @@ Soroban: https://en.wikipedia.org/wiki/Soroban
 
 ## soroban.showNumber
 
-Displaying number as on the soroban abacus.
+Displays number as on the soroban abacus.
 
 ```sig
 soroban.showNumber(3.14)
