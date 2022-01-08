@@ -47,7 +47,7 @@ namespace soroban {
     /**
      * Displays number as on the soroban abacus.
      * @param n the number, eg: 0
-     * @param alignment align to the given column, eg: Align.Right
+     * @param alignment align to the given column, eg: Right
      * @param refresh refresh the screen, eg: true
      */
     //% blockId=soroban_show_number
