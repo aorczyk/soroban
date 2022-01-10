@@ -1,7 +1,16 @@
 # Soroban
 
-Displaying number on the micro:bit screen as on the soroban abacus. This allows to display 5 digit number on the screen.
-
+Displaying number on the micro:bit screen as on the soroban abacus. This allows to display 5 digit number on the screen. It's also much faster than displaying normal number, eq:  
+1. Single digit number  
+``basic.showNumber(9)`` - takes about 760ms  
+``soroban.showNumber(9)`` - takes about 5ms
+2. Multiple digits number (eq temperature)  
+``basic.showNumber(25)`` - takes about 2657ms  
+``soroban.showNumber(25)`` - takes about 5ms
+3. Multiple digits number (eq Pi)  
+``basic.showNumber(3.141)`` - takes about 4458ms  
+``soroban.showNumber(3.141)`` - takes about 5ms  
+  
 Soroban: https://en.wikipedia.org/wiki/Soroban  
 
 ### Representation of digits 0 - 9, minus and decimal separator on the micro:bit screen (- led is off, + led is on):
