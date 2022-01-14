@@ -105,12 +105,43 @@ control.assert(
     "Failed: 15 - left"
 );
 
+soroban.showNumber(9)
+soroban.showNumber(0)
+control.assert(
+    checkScreen('-----,-----,-----,-----,-----,'),
+    "Failed: 0"
+);
+
 // Clock format: 12:15
-soroban.showNumber(12, Align.C1, true);
-soroban.showNumber(15, Align.C4, false);
+soroban.showNumber(12, Align.C2, true);
+soroban.showNumber(15, Align.C5, false);
 control.assert(
     checkScreen('-+---,-++--,-----,-+---,+----,'),
     "Failed: 12:15"
+);
+
+// Clock format 2: 2:05
+soroban.showNumber(2, Align.C2, true);
+soroban.showNumber(5, Align.C5, false);
+control.assert(
+    checkScreen('-----,-++--,-----,-----,+----,'),
+    "Failed: 2:05"
+);
+
+// Custom column - clearing number in the same column when not refreshing all
+soroban.showNumber(5, Align.C5, true);
+soroban.showNumber(4, Align.C5, false);
+soroban.showNumber(1, Align.C5, false);
+control.assert(
+    checkScreen('-----,-----,-----,-----,-+---,'),
+    "Failed: Custom column"
+);
+
+soroban.showNumber(19, Align.C4, true)
+soroban.showNumber(0, Align.C4, false)
+control.assert(
+    checkScreen('-----,-----,-+---,-----,-----,'),
+    "Failed: Custom column - 0"
 );
 
 soroban.showNumber(12345);
