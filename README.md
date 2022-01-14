@@ -1,6 +1,6 @@
 # Soroban
 
-Displaying number on the micro:bit screen as on the soroban abacus. This allows to display 5 digit number on the screen. It's also much faster than displaying normal number, eq:  
+Displaying number on the micro:bit screen as on the soroban abacus. This allows to display 5 digit number on the screen. It's also much faster than displaying normal number:  
 1. Single digit number  
 ``basic.showNumber(9)`` - takes about 760 ms  
 ``soroban.showNumber(9)`` - takes about 1 ms
