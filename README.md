@@ -4,10 +4,10 @@ Displaying number on the micro:bit screen as on the soroban abacus. This allows 
 1. Single digit number  
 ``basic.showNumber(9)`` - takes about 760 ms  
 ``soroban.showNumber(9)`` - takes about 1 ms
-2. Multiple digits number (eq temperature)  
+2. Multiple digits number (e.g. temperature)  
 ``basic.showNumber(25)`` - takes about 2657 ms  
 ``soroban.showNumber(25)`` - takes about 1 ms
-3. Multiple digits number (eq Pi)  
+3. Multiple digits number (e.g. Pi)  
 ``basic.showNumber(3.141)`` - takes about 4458 ms  
 ``soroban.showNumber(3.141)`` - takes about 1 ms  
   
