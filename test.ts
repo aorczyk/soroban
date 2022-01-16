@@ -3,10 +3,15 @@
  */
 
 // Visual test
-for (let n = 1; n <= 10; n++){
-    soroban.showNumber(n)
-    basic.pause(500)
-}
+// for (let n = 1; n <= 15; n++){
+//     soroban.showNumber(n)
+//     basic.pause(300)
+// }
+
+// for (let n = 15; n >= 0; n--) {
+//     soroban.showNumber(n)
+//     basic.pause(300)
+// }
 
 function checkScreen(screen: string){
     let out = '';
@@ -137,11 +142,12 @@ control.assert(
     "Failed: Custom column"
 );
 
-soroban.showNumber(19, Align.C4, true)
+soroban.showNumber(5, Align.C1, true)
+soroban.showNumber(111, Align.C4, false)
 soroban.showNumber(0, Align.C4, false)
 control.assert(
-    checkScreen('-----,-----,-+---,-----,-----,'),
-    "Failed: Custom column - 0"
+    checkScreen('+----,-----,-----,-----,-----,'),
+    "Failed: Custom column - from 111 to 0"
 );
 
 soroban.showNumber(12345);

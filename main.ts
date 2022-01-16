@@ -25,6 +25,8 @@ const enum Align {
 
 //% block="Soroban" color="#8B4513" weight=100 icon="\uf2a1"
 namespace soroban {
+    let numberLengthByColumn: Align[]
+
     function showDigit(n: number, col: number, refresh: boolean) {
         if (!refresh) {
             for (let i = 0; i <= 4; i++) {
@@ -59,13 +61,13 @@ namespace soroban {
         }
 
         let chars = nStr.split('')
+        let charsLength = chars.length
+        let c = 5 - charsLength
 
-        let c = 5 - chars.length
-        
         if (alignment == -1) {
             c = 0
         } else {
-            c = alignment + 1 - chars.length
+            c = alignment + 1 - charsLength
         }
         
         if (refresh) {
@@ -85,5 +87,19 @@ namespace soroban {
 
             c += 1
         }
+
+        if (refresh || numberLengthByColumn == undefined){
+            numberLengthByColumn = [0, 0, 0, 0, 0]
+        }
+
+        if (!refresh) {
+            let dn = numberLengthByColumn[alignment] - charsLength
+
+            for (let i = dn; i > 0; i--){
+                showDigit(0, alignment - i, false)
+            }
+        }
+        
+        numberLengthByColumn[alignment] = charsLength
     }
 }
